@@ -35,5 +35,57 @@ export class DashboardComponent implements OnInit {
     this.CurrentExpenditure = 96788;
     this.AvailableFunds = 52536;
 
+    this.Clients =[
+      "ABC Infotech Ltd.", "DEF Software Solutions","GHI Industries"
+    ];
+
+    this.Projects = [
+      "Project A", "Project B", "Project C"
+    ];
+
+    for(var i =2024; i >=2018;i--){
+      this.Years.push(i);
+    }
+
+    this.TeamMembersSummary = [
+
+      {Region: "East", TeamMembersCount: 20, TemporarilyUnavailableMembers: 4},
+      {Region: "West", TeamMembersCount: 10, TemporarilyUnavailableMembers: 6},
+      {Region: "North", TeamMembersCount: 15, TemporarilyUnavailableMembers: 8},
+      {Region: "South", TeamMembersCount: 5, TemporarilyUnavailableMembers: 12},
+    ];
+
+    this.TeamMembers = [
+      {
+        Region: "East", Members: [
+          { ID: 1, Name: "Sandeep", Status: "Available" },
+          { ID: 2, Name: "Siva", Status: "Un-Available" },
+          { ID: 3, Name: "Shekar", Status: "Busy" }
+        ]
+      },
+      {
+        Region: "West", Members: [
+          { ID: 1, Name: "Anand", Status: "Un Available" },
+          { ID: 2, Name: "Amit", Status: "Available" },
+          { ID: 3, Name: "Aakash", Status: "Busy" }
+        ]
+      },
+      {
+        Region: "North", Members: [
+          { ID: 1, Name: "Bhargav", Status: "Busy" },
+          { ID: 2, Name: "Bharath", Status: "Busy" },
+          { ID: 3, Name: "Bheeshma", Status: "Busy" }
+        ]
+      },
+      {
+        Region: "South", Members: [
+          { ID: 1, Name: "Naveen", Status: "Available" },
+          { ID: 2, Name: "Naresh", Status: "Available" },
+          { ID: 3, Name: "Nitheesh", Status: "Available" }
+        ]
+      }
+    ];
+
+
   }
 }
