@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   PendingTasks: number = 0;
   UpComingProjects: number = 0;
   ProjectCost: number = 0;
+  Today:Date | undefined;
 
   CurrentExpenditure: number = 0;
   AvailableFunds: number = 0;
@@ -34,6 +35,7 @@ export class DashboardComponent implements OnInit {
     this.ProjectCost = 2113507;
     this.CurrentExpenditure = 96788;
     this.AvailableFunds = 52536;
+    this.Today = new Date();
 
     this.Clients =[
       "ABC Infotech Ltd.", "DEF Software Solutions","GHI Industries"
