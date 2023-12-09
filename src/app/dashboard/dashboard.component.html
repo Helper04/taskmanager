@@ -72,9 +72,16 @@
                     <div class="col-6 text-right">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dtopdwonMenuButton"
-                                data-toggle="dropdown">2023</button>
+                                data-toggle="dropdown">2024</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#" *ngFor="let year of Years">{{year}}</a>
+                                <a class="dropdown-item" href="#" *ngFor="let year of Years">
+                                    <span [ngSwitch]="year">
+                                        <span *ngSwitchCase="'2024'" style="color: green;">{{year}}</span>
+                                        <span *ngSwitchCase="'2023'" style="color: red;">{{year}}</span>
+                                        <span *ngSwitchCase="'2022'" style="color: blue;">{{year}}</span>
+                                        <span *ngSwitchDefault style="color: black;">{{year}}</span>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
